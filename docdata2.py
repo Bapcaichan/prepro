@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Đọc dữ liệu
-df = pd.read_csv("C:/Users/rocky/Downloads/Gold Price (2013-2023).csv")
-df2 = pd.read_csv("C:/Users/rocky/Downloads/BrentOilPrices2.csv")
+df = pd.read_csv(r"github\prepro\data\Gold Price (2013-2023).csv")
+df2 = pd.read_csv(r"github\prepro\data\BrentOilPrices2.csv")
 
 # Chuyển đổi cột "Date" sang kiểu datetime
 df["Date"] = pd.to_datetime(df["Date"])
