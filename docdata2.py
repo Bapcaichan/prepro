@@ -7,6 +7,8 @@ import seaborn as sns
 df = pd.read_csv(r"github\prepro\data\Gold Price (2013-2023).csv")
 df2 = pd.read_csv(r"github\prepro\data\BrentOilPrices2.csv")
 
+df.info()
+df2.info()
 # Chuyển đổi cột "Date" sang kiểu datetime
 df["Date"] = pd.to_datetime(df["Date"])
 df2["Date"] = pd.to_datetime(df2["Date"])
@@ -37,12 +39,12 @@ gold_price_2022 = df.loc["2022-01-01":"2022-12-31", "Price"]
 oil_price_2022 = df2.loc["2022-01-01":"2022-12-31", "Price"]
 
 # Vẽ biểu đồ scatter
-plt.figure(figsize=(10, 5))
-plt.scatter(gold_price_2022, oil_price_2022, alpha=0.7, c='blue', edgecolors='k')
-plt.xlabel("Gold Price (USD)")
-plt.ylabel("Brent Oil Price (USD)")
-plt.title("Gold Price vs Brent Oil Price (2022)")
-plt.grid(True)
-plt.show(block= True)
+# plt.figure(figsize=(10, 5))
+# plt.scatter(gold_price_2022, oil_price_2022, alpha=0.7, c='blue', edgecolors='k')
+# plt.xlabel("Gold Price (USD)")
+# plt.ylabel("Brent Oil Price (USD)")
+# plt.title("Gold Price vs Brent Oil Price (2022)")
+# plt.grid(True)
+# plt.show(block= True)
 
-pd.concat(df, df2, axis = 1)
+# pd.concat(df, df2, axis = 1)
